@@ -1,0 +1,28 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Claude Code local state
+.claude/settings.local.json
+.claude/logs/
+.claude/cache/
+
+# OMC orchestration state (local only)
+.omc/
+
+# Logs / temp
+*.log
+*.tmp

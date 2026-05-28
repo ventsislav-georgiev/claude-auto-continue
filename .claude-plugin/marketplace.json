@@ -1,0 +1,13 @@
+{
+  "name": "auto-continue-local",
+  "owner": {
+    "name": "Ventsislav Georgiev"
+  },
+  "plugins": [
+    {
+      "name": "auto-continue",
+      "source": "./",
+      "description": "Detect known recoverable tool errors and force the agent to continue."
+    }
+  ]
+}

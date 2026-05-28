@@ -1,0 +1,32 @@
+{
+  "name": "auto-continue",
+  "description": "Detects known recoverable tool errors and forces the agent to continue instead of stopping. Injects fix guidance for patterns like 'File has not been read yet', 'String to replace not found', etc.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ventsislav Georgiev"
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/post-tool-use.js\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/stop-handler.js\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
